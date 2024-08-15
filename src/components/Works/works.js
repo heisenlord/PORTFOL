@@ -6,6 +6,9 @@ import portfolio3 from "../../assests/Images/portfolio3.jpeg";
 import portfolio4 from "../../assests/Images/portfolio4.jpeg";
 import portfolio5 from "../../assests/Images/portfolio5.jpeg";
 import portfolio6 from "../../assests/Images/portfolio6.jpeg";
+import portfolio7 from "../../assests/Images/logo3.png";
+
+
 
 const Works = () => {
   return (
@@ -34,7 +37,7 @@ const Works = () => {
         <div
           className="containerImg"
           onClick={() =>
-            window.open("https://nishanth9491.github.io/FActOO/", "_blank")
+            window.open("https://heisenlord.github.io/FActOO/", "_blank")
           }
         >
           <img src={portfolio1} alt="" className="worksImg" />
@@ -45,7 +48,7 @@ const Works = () => {
           className="containerImg"
           onClick={() =>
             window.open(
-              "https://github.com/nishanth9491/VoiceYourMail",
+              "https://github.com/heisenlord/VoiceYourMail",
               "_blank"
             )
           }
@@ -57,7 +60,7 @@ const Works = () => {
         <div
           className="containerImg"
           onClick={() =>
-            window.open("https://github.com/nishanth9491/FACEIDCAR", "_blank")
+            window.open("https://github.com/heisenlord/FACEIDCAR", "_blank")
           }
         >
           <img src={portfolio3} alt="" className="worksImg" />
@@ -71,6 +74,13 @@ const Works = () => {
         </div>{" "}
         <div className="containerImg">
           <img src={portfolio6} alt="" className="worksImg" />
+          <h1 className="containerImgText">IDEATION PHASE</h1>
+          <p>Ideation</p>
+        </div>
+            <div className="containerImg"  onClick={() =>
+            window.open("https://github.com/heisenlord/funjokesChromeExtension", "_blank")
+          }>
+          <img src={portfolio7} alt="" className="worksImg" />
           <h1 className="containerImgText">IDEATION PHASE</h1>
           <p>Ideation</p>
         </div>
