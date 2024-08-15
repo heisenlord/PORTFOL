@@ -82,7 +82,7 @@ const Works = () => {
           }>
           <img src={portfolio7} alt="" className="worksImg" />
           <h1 className="containerImgText">JOkES EXTENSION</h1>
-          <p>Ideation</p>
+          <p>Chrome extension</p>
         </div>
       </div>
     </section>
