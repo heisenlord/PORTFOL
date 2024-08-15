@@ -81,7 +81,7 @@ const Works = () => {
             window.open("https://github.com/heisenlord/funjokesChromeExtension", "_blank")
           }>
           <img src={portfolio7} alt="" className="worksImg" />
-          <h1 className="containerImgText">IDEATION PHASE</h1>
+          <h1 className="containerImgText">JOkES EXTENSION</h1>
           <p>Ideation</p>
         </div>
       </div>
