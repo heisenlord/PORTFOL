@@ -68,10 +68,10 @@ const Works = () => {
           <p>python</p>
         </div>
              <div className="containerImg"  onClick={() =>
-            window.open("https://github.com/heisenlord/funjokesChromeExtension", "_blank")
+            window.open("https://github.com/heisenlord/PingApply", "_blank")
           }>
           <img src={portfolio7} alt="" className="worksImg" />
-          <h1 className="containerImgText">JOkES EXTENSION</h1>
+          <h1 className="containerImgText">PINGAPPLY</h1>
           <p>Chrome extension</p>
         </div>
         <div className="containerImg">
