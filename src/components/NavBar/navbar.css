@@ -12,6 +12,8 @@
     z-index:3;
     background-color: black;
     opacity:0.99 ;
+    backdrop-filter: blur(50px);
+
 
 }
 .logo{
