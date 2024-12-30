@@ -13,6 +13,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+     <BrowserRouter>
+        <Routes>
+        
+          <Route path="/projects" element={<works />} />
+          <Route path="/contact" element={<Contact />} />
+
+          <Route path="/intro" element={<Intro />} />
+        </Routes>
+      </BrowserRouter>
     <div className="Duoscreen" >
       
       <Navbar/>
