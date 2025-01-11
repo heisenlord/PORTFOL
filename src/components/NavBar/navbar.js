@@ -15,7 +15,7 @@ function Navbar() {
     // For simplicity, we'll use a simple anchor tag for the download
     const link = document.createElement("a");
     link.href = pdfFile;
-    link.download = "NishanthResumeFeb2024.pdf";
+    link.download = "NishanthKunduru_cv.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
