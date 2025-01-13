@@ -9,7 +9,7 @@ export const Holder = () => {
     <div className='holder'>
       <ul class="holderbox">
         <li class="linkedin">
-          <a className='float' href="https://github.com/heisenlord"
+        <a className='float' href="https://www.linkedin.com/in/nishanth-reddy-a72036215/"
           target="_blank"
           rel="noreferrer">
             
@@ -17,7 +17,8 @@ export const Holder = () => {
           </a>
           </li>
         <li class="github">
-          <a className='float' href="https://www.linkedin.com/in/nishanth-reddy-a72036215/"
+        <a className='float' href="https://github.com/heisenlord"
+
           target="_blank"
           rel="noreferrer">
             <img src={Github} alt="" className="clientImgd" />
