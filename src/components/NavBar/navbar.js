@@ -24,6 +24,7 @@ function Navbar() {
 
   return (
     <nav class="navbar">
+       
       <img className="logo" src={logo} alt="" style={{ width: "5rem" }} />
 
 
@@ -131,12 +132,17 @@ function Navbar() {
         >
           Contact
         </Link>
-      </div>
-      <Holder />
 
+      </div>
+      <div>
+        <Holder/>
       <button onClick={onDownloadClick} class="navcontact ">
+     
+
         <img src={contactImg} class="navbarcontactimg" alt="" />
+     
       </button>
+      </div>
     </nav>
   );
 }
