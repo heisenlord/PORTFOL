@@ -25,7 +25,7 @@ export const Holder = () => {
           </a>
         </li>
         <li class="leetcode">
-          <a className='float' href="https://leetcode.com/nishanthkunduru/"
+          <a className='float' href="https://leetcode.com/u/nishanthreddy007/"
           target="_blank"
           rel="noreferrer">
             <img src={Leetcode} alt="" className="clientImgd leet" />
