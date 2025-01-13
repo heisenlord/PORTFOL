@@ -94,6 +94,38 @@ filter: blur(100%);
    
 
 }
+@keyframes mobstart{
+    0%{
+        top:110vh;
+    }
+    50%{
+        top:80vh;
+    }
+    75%{
+        transform: rotate(-15deg);
+
+    }
+    80%{
+        transform: rotate(10deg);
+
+    }
+    85%{
+        transform: rotate(-10deg);
+
+    }
+    90%{
+        transform: rotate(5deg);
+
+    }
+    95%{
+        transform: rotate(-5deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+}
 
 @keyframes start {
     0%{
