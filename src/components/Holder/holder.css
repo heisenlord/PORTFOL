@@ -83,6 +83,7 @@ filter: blur(100%);
     .holderbox{
         left: 40%;
         top:80vh;
+        animation: mobstart 2s ease-in-out;
     }
     .holderbox:hover,.holder:active{
         top: 78vh;
@@ -98,15 +99,17 @@ filter: blur(100%);
     0%{
         top:110vh;
     }
-    50%{
+    60%{
         top:80vh;
+        transform: rotate(0deg);
+
     }
     75%{
         transform: rotate(-15deg);
 
     }
     80%{
-        transform: rotate(10deg);
+        transform: rotate(15deg);
 
     }
     85%{
@@ -131,8 +134,30 @@ filter: blur(100%);
     0%{
         top: 110vh;
     }
-    100%{
+    60%{
         top:90vh;
     }
-    
+    75%{
+        transform: rotate(-15deg);
+
+    }
+    80%{
+        transform: rotate(15deg);
+
+    }
+    85%{
+        transform: rotate(-10deg);
+
+    }
+    90%{
+        transform: rotate(5deg);
+
+    }
+    95%{
+        transform: rotate(-5deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
