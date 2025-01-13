@@ -82,7 +82,7 @@ filter: blur(100%);
 @media screen and (max-width:720px) {
     .holderbox{
         left: 40%;
-        top:85vh;
+        top:80vh;
     }
 
 }
