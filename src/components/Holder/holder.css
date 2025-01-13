@@ -84,6 +84,14 @@ filter: blur(100%);
         left: 40%;
         top:80vh;
     }
+    .holderbox:hover,.holder:active{
+        top: 78vh;
+        width: 9rem;
+        height: 3rem;
+        left: 35%;
+    
+    }
+   
 
 }
 

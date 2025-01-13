@@ -132,7 +132,7 @@ function Navbar() {
           Contact
         </Link>
       </div>
-      <Holder className="holder"/>
+      <Holder />
 
       <button onClick={onDownloadClick} class="navcontact ">
         <img src={contactImg} class="navbarcontactimg" alt="" />

@@ -140,8 +140,8 @@
     }
     .navcontact {
         position: absolute;
-        top: 80vh;
-        right: 3rem;
+        top: 78vh;
+        right: 2rem;
         width: 4rem;
         filter: blur(0.5px);
         box-shadow: 0.25rem 0.25rem 0.5rem rgb(95, 37, 46);
