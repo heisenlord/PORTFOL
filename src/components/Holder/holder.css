@@ -79,12 +79,20 @@ filter: blur(100%);
     background-color: white;
     transition: 1s;
 }
+@media screen and (max-width:720px) {
+    .holderbox{
+        left: 40%;
+        top:85vh;
+    }
+
+}
+
 @keyframes start {
     0%{
         top: 110vh;
     }
     100%{
-        top:90vh;
+        top:80vh;
     }
     
 }

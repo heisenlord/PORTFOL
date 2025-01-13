@@ -138,7 +138,7 @@
     }
     .navcontact {
         position: absolute;
-        top: 90vh;
+        top: 85vh;
         right: 3rem;
         width: 4rem;
         filter: blur(0.5px);
@@ -148,6 +148,7 @@
 
 
       }
+      
       
       
    

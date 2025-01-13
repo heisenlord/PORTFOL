@@ -28,7 +28,6 @@ function Navbar() {
 
 
       <div className="navcenter">
-        <Holder/>
         <Link
           activeClass="active"
           to="intro"
@@ -133,7 +132,8 @@ function Navbar() {
           Contact
         </Link>
       </div>
-    
+      <Holder className="holder"/>
+
       <button onClick={onDownloadClick} class="navcontact ">
         <img src={contactImg} class="navbarcontactimg" alt="" />
       </button>
