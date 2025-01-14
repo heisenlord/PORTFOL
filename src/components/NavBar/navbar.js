@@ -6,7 +6,7 @@ import menu from "../../assests/Images/menu.png";
 // import btnImge from '../../assests/Images/hireme.png';
 import { Link } from "react-scroll";
 
-import pdfFile from "../../assests/Images/Nishanthkunduru_cv_Jan_84.pdf";
+import pdfFile from "../../assests/Images/NishanthKunduru_cv_Jan_84.pdf";
 import {Holder} from "../Holder/Holder";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
