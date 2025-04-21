@@ -1,0 +1,170 @@
+.holder{
+    color: white;
+    
+}
+.holderbox{
+    position: absolute;
+    top: 90vh;
+    left: 47%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 5rem;
+    background-color: rgb(41, 14, 14);
+    border-radius: 10rem;
+    border: rgb(255, 255, 255) 1px solid;
+    transition: 1s;
+    animation: start 1s ease-in-out;
+    animation-delay: 1s;
+
+
+
+}
+.holderbox:hover{
+  
+    top: 88vh;
+    width: 9rem;
+    height: 3rem;
+    left: 46%;
+
+}
+.holderbox:hover img{
+    width: 30px;
+    height: 30px;
+}
+.holderbox:hover .leet{
+    display: flex;
+    filter:opacity(0);
+    transition: 1s;
+
+}
+ul{
+    
+    list-style: none;
+}
+li{
+
+    margin: 0.5rem;
+
+  
+}
+.li:hover{
+    background-color: rgb(201, 102, 31);
+    border-radius: 50px;
+}
+.float{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    transition: 0.5s;
+
+}
+.float:hover{
+    margin-left: 3px;
+
+ border-radius: 5px;
+    background-color: beige;
+    transition: 0.5s;
+}
+.leet{
+    
+    
+filter: opacity(0);
+    transition: 0.25s;
+
+}
+.clientImgd{
+   border-radius: 5rem;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    transition: 1s;
+}
+.holder:hover .leet{
+    filter: opacity(1);
+    
+   }
+@media screen and (max-width:720px) {
+    .holderbox{
+        left: 40%;
+        top:80vh;
+        animation-delay: 3s;
+        animation: mobstart 2s ease-in-out;
+    }
+    .holderbox:hover,.holder:active{
+        top: 78vh;
+        width: 9rem;
+        height: 3rem;
+        left: 35%;
+    
+    }
+   
+
+}
+@keyframes mobstart{
+    0%{
+        top:110vh;
+    }
+    60%{
+        top:80vh;
+        transform: rotate(0deg);
+
+    }
+    75%{
+        transform: rotate(-15deg);
+
+    }
+    80%{
+        transform: rotate(15deg);
+
+    }
+    85%{
+        transform: rotate(-10deg);
+
+    }
+    90%{
+        transform: rotate(5deg);
+
+    }
+    95%{
+        transform: rotate(-5deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+}
+
+@keyframes start {
+    0%{
+        top: 110vh;
+    }
+    60%{
+        top:90vh;
+    }
+    75%{
+        transform: rotate(-15deg);
+
+    }
+    80%{
+        transform: rotate(15deg);
+
+    }
+    85%{
+        transform: rotate(-10deg);
+
+    }
+    90%{
+        transform: rotate(5deg);
+
+    }
+    95%{
+        transform: rotate(-5deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

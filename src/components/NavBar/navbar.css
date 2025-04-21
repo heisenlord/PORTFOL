@@ -1,0 +1,147 @@
+.navbar {
+  height: 5rem;
+  width: 80%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 2rem;
+  z-index: 3;
+  background-color: rgba(29, 28, 28, 0.4);
+  border-radius: 3rem;
+  opacity: 0.99;
+  backdrop-filter: blur(50px);
+}
+.logo {
+  object-fit: cover;
+}
+.navitems {
+  margin: 1rem;
+  cursor: pointer;
+  transition: 0.25s;
+  padding-bottom: 1rem;
+}
+
+.navitems:hover {
+  color: rgba(246, 153, 54, 0.506);
+  border-bottom: 5px solid rgba(218, 118, 51, 0.506);
+}
+
+.navbarcontactimg {
+  object-fit: cover;
+  height: 2em;
+  margin: 0.75rem;
+}
+.navcontact {
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem pink;
+  width: 5rem;
+  height: 3rem;
+  /* animation: wobble 5s ease-in-out infinite; */
+  transition: 1s;
+}
+.navcontact:hover {
+  height: 4rem;
+  animation: none;
+}
+.workBtnText {
+  color: white;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.active {
+  color: antiquewhite;
+  padding-bottom: 3px;
+  border-top: 6px solid rgba(164, 27, 255, 0.506);
+}
+.active.navitems:hover {
+  color: rgb(56, 54, 51);
+  border-bottom: none;
+}
+
+.navMenu {
+  position: absolute;
+  top: 4rem;
+  right: 1.5rem;
+
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  height: fit-content;
+  min-width: 15rem;
+  background-color: rgb(40, 40, 40);
+  border-radius: 1rem;
+}
+.mobMenu {
+  display: none;
+  object-fit: cover;
+
+  height: 1.8rem;
+  overflow: hidden;
+}
+
+.listItem {
+  color: whitesmoke;
+  padding: 0.5rem 3rem;
+  margin: 0.25rem;
+}
+.listItem.active {
+  border-top: none;
+  color: rgba(209, 203, 216, 0.506);
+  letter-spacing: 3px;
+  border-right: 6px solid rgba(164, 27, 255, 0.506);
+}
+
+@media screen and (max-width: 720px) {
+  .mobMenu {
+    display: flex;
+    position: absolute;
+    right: 2rem;
+  }
+  .navcenter {
+    display: none;
+  }
+  .navcontact {
+    position: absolute;
+    top: 78vh;
+    right: 2rem;
+    width: 4rem;
+
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(95, 37, 46);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
