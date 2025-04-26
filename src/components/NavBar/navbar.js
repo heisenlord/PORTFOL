@@ -11,7 +11,6 @@ import { Holder } from "../Holder/Holder";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const onDownloadClick = () => {
-    // Trigger the download logic here
     // You can use a library like FileSaver.js to handle the download
     // For simplicity, we'll use a simple anchor tag for the download
     const link = document.createElement("a");
