@@ -24,7 +24,10 @@ function Navbar() {
 
   return (
     <nav class="navbar">
-      <img className="logo" src={logo} alt="" style={{ width: "2rem" }} />
+      <div className="navbar-logo-container">
+        <img className="logo" src={logo} alt="Logo" />
+        <span className="logo-text">Nishanth</span>
+      </div>
 
       <div className="navcenter">
         <Link
@@ -92,7 +95,7 @@ function Navbar() {
           className="listItem"
           onClick={() => setShowMenu(false)}
         >
-          Home
+          HireMe
         </Link>
         <Link
           activeClass="active"

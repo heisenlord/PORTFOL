@@ -1,155 +1,123 @@
-#intro{
-    height: calc(100vh - 5rem);
-    width: 100vw;
-    max-width: 75rem;
-    
-    overflow: hidden;
-    text-align: center;
+//make the home page more attractive nad make it animated
+#intro {
+  height: calc(100vh - 5rem);
+  width: 100vw;
+  max-width: 75rem;
+
+  overflow: hidden;
+  text-align: center;
 }
 
-.bg{
-    position: absolute;
-    top:5rem;
-    right: 0;
-    z-index: -1;
-    height: 100vh;
-    object-fit: fill;
-    height:600px;
+.bg {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  z-index: -1;
+  height: 100vh;
+  object-fit: fill;
+  height: 600px;
 }
-.introContent{
-    height:100vh;
-    width: 100vw;
-    padding:2rem;
-    font-size: 3rem;
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+.introContent {
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
-.Hello{
-
-    font-size: 1.75rem;
-    font-weight: 100;
+.Hello {
+  font-size: 1.75rem;
+  font-weight: 100;
 }
-.introName{
-    
-    color: rgba(83, 119, 38, 0.506);
-    position: relative;
-    
+.introName {
+  color: rgba(83, 119, 38, 0.506);
+  position: relative;
 }
 
-
-
-
-.introName::after{
-    content: "";
-    position: absolute;
-    height:100%;
-    width: 100%;
+.introName::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  background-color: black;
+  border-left: 3px solid antiquewhite;
+  animation: typing 1.5s steps(8) 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.25s;
+}
+@keyframes typing {
+  0% {
     left: 0%;
-    background-color: black;
     border-left: 3px solid antiquewhite;
-    animation: typing 1.5s steps(8) 1 ;
-    animation-fill-mode: forwards;
-    animation-delay: 0.25s;
-
-}
-@keyframes typing{
-    0% {
-        left: 0%;
-        border-left: 3px solid antiquewhite;
-      }
-      99.9% {
-        left: 100%;
-        border-left: 3px solid rgb(107, 107, 107);
-
-      }
-      100% {
-        left: 100%;
-        border-left: 3px solid rgb(9, 9, 9); /* Ensure border stays transparent at 100% */
-      }
-
+  }
+  99.9% {
+    left: 100%;
+    border-left: 3px solid rgb(107, 107, 107);
+  }
+  100% {
+    left: 100%;
+    border-left: 3px solid rgb(9, 9, 9); /* Ensure border stays transparent at 100% */
+  }
 }
 
-
-
-
-
-.introName:active{
-    color: rgb(244, 244, 203);
+.introName:active {
+  color: rgb(244, 244, 203);
 }
 
-
-.introPara{
-    font-size: medium;
-    font-weight: 300;
-    letter-spacing: 1px;
+.introPara {
+  font-size: medium;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
-.btn{
-    background-color: rgb(255, 255, 255);
-    margin:1rem 0;
-    padding: 0.75rem 1.5rem;
-    border-radius: 2rem;
-    width: 8rem;
-    box-shadow: 10px 10px lightblue;
-    transition-duration: 0.5s;
-
-
-    
+.btn {
+  background-color: rgb(255, 255, 255);
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  width: 8rem;
+  box-shadow: 10px 10px lightblue;
+  transition-duration: 0.5s;
 }
-.btnImg{
-    object-fit: cover;
-    margin: 0 0.25rem;
-    height: 1rem;
+.btnImg {
+  object-fit: cover;
+  margin: 0 0.25rem;
+  height: 1rem;
 }
-.HireMe{
-    font-size: 1rem;
-    color: black;
-
+.HireMe {
+  font-size: 1rem;
+  color: black;
 }
-.btn:hover{
-    width: 10rem;
-    background-color: bisque;
-    box-shadow: 10px 10px rgb(12, 78, 100);
+.btn:hover {
+  width: 10rem;
+  background-color: bisque;
+  box-shadow: 10px 10px rgb(12, 78, 100);
 
-    box-shadow: inset ;
-
+  box-shadow: inset;
 }
-.btn:active{
-    height: 5rem;
-    background-color:  rgb(61, 136, 161);
-    box-shadow: 10px 10px bisque;
-
-   
+.btn:active {
+  height: 5rem;
+  background-color: rgb(61, 136, 161);
+  box-shadow: 10px 10px bisque;
 }
-@media screen and (max-width:630px) {
-    .bg{
-       
-       right: -10vw;
-
-    }
-    .introContent
-    {
-        font-size: 9vw;
-    }
-    
-    
+@media screen and (max-width: 630px) {
+  .bg {
+    right: -10vw;
+  }
+  .introContent {
+    font-size: 9vw;
+  }
 }
-@media screen and (max-width:540px) {
-    .bg{
-        right: -50vw;
-    }
-   
-    
-
+@media screen and (max-width: 540px) {
+  .bg {
+    right: -50vw;
+  }
 }
-@media screen and (max-width:400px) {
-    .bg{
-        right: -7 0vw;
-    }
-   
-    
-
+@media screen and (max-width: 400px) {
+  .bg {
+    right: -7 0vw;
+  }
 }
-

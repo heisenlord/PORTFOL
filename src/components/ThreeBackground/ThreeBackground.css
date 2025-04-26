@@ -1,0 +1,24 @@
+.three-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.three-background canvas {
+  display: block;
+}
+
+/* Update existing App styles to work with the background */
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.Duoscreen {
+  position: relative;
+  z-index: 1;
+}

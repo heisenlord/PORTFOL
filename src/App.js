@@ -8,38 +8,32 @@ import Sidecar from "./components/Sidecar/sidecar";
 import Subwork from "./components/Works/Subworks/subwork";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import './App.css';
-
-
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-     <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-        
           <Route path="/projects" element={<Works />} />
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/intro" element={<Intro />} />
         </Routes>
       </BrowserRouter>
-    <div className="Duoscreen" >
-    
-      <Navbar/>
-      <Intro/>
-      <Skills/>
-      <Works/>
-      <Subwork/>
-      
-      <Contact/>
-     <Footer/>
-     <holder/>
+      <div className="Duoscreen">
+        <Navbar />
+        <Intro />
+        <Skills />
+        <Works />
+        <Subwork />
 
+        <Contact />
+        <Footer />
+        <holder />
+      </div>
+      <Sidecar />
     </div>
-    <Sidecar/>
-    </div>
-
   );
 }
 

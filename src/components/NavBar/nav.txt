@@ -1,0 +1,32 @@
+  const onDownloadClick = () => {
+    // Add confetti effect
+    createConfetti();
+    
+    // Download the CV
+    const link = document.createElement("a");
+    link.href = pdfFile;
+    link.download = "NishanthKunduru_cv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // Simple confetti effect function
+  const createConfetti = () => {
+    const confettiContainer = document.createElement("div");
+    confettiContainer.className = "confetti-container";
+    document.body.appendChild(confettiContainer);
+
+    for (let i = 0; i < 50; i++) {
+      const confetti = document.createElement("div");
+      confetti.className = "confetti";
+      confetti.style.left = `${Math.random() * 100}%`;
+      confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      confettiContainer.appendChild(confetti);
+    }
+
+    setTimeout(() => {
+      document.body.removeChild(confettiContainer);
+    }, 5000);
+  };
