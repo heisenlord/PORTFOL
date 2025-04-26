@@ -47,7 +47,6 @@
   box-shadow: 0.25rem 0.25rem 0.5rem pink;
   width: 5rem;
   height: 3rem;
-  /* animation: wobble 5s ease-in-out infinite; */
   transition: 1s;
 }
 .navcontact:hover {

@@ -34,16 +34,6 @@ export const Holder = () => {
             <img src={Github} alt="" className="clientImgd" />
           </a>
         </li>
-        {/* <li className="leetcode">
-          <a
-            className="float"
-            href="https://leetcode.com/u/nishanthreddy007/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={Leetcode} alt="" className="clientImgd leet" />
-          </a>
-        </li> */}
       </ul>
     </div>
   );

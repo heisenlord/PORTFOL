@@ -7,11 +7,6 @@
   margin: 5px;
   transition: 0.5s;
 }
-/* @media screen and (max-width: 540px) {
-    .dot {
-        background-color: rgba(234, 208, 12, 0.887);
-    }
-} */
 
 .line {
   width: 2px;

@@ -60,7 +60,7 @@
   }
   100% {
     left: 100%;
-    border-left: 3px solid rgb(9, 9, 9); /* Ensure border stays transparent at 100% */
+    border-left: 3px solid rgb(9, 9, 9);
   }
 }
 
