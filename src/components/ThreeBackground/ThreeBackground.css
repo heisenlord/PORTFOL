@@ -12,7 +12,6 @@
   display: block;
 }
 
-/* Update existing App styles to work with the background */
 .App {
   position: relative;
   min-height: 100vh;

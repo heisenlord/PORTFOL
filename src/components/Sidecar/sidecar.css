@@ -10,7 +10,7 @@
 
 .line {
   width: 2px;
-  height: 10vh; /* Adjust the height as needed */
+  height: 10vh;
   background-color: #c0b5a7;
 }
 .dot:hover {
