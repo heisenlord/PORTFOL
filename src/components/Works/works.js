@@ -7,7 +7,7 @@ import portfolio4 from "../../assests/Images/portfolio4.jpeg";
 import portfolio5 from "../../assests/Images/portfolio5.jpeg";
 import portfolio6 from "../../assests/Images/portfolio6.jpeg";
 import portfolio7 from "../../assests/Images/logo3.png";
-
+import notatwitter from "../../assests/Images/notatwitterlogo.png";
 const Works = () => {
   return (
     <section id="works">
@@ -19,6 +19,26 @@ const Works = () => {
         ever-evolving world of computing
       </span>
       <div className="worksImgs">
+        <div
+          className="containerImg"
+          onClick={() =>
+            window.open("https://notatwitter.vercel.app/", "_blank")
+          }
+        >
+          <img src={notatwitter} alt="" className="worksImg" />
+          <h1 className="containerImgText">NotATwitter</h1>
+          <p>Chrome extension</p>
+        </div>
+        <div
+          className="containerImg"
+          onClick={() =>
+            window.open("https://github.com/heisenlord/PingApply", "_blank")
+          }
+        >
+          <img src={portfolio7} alt="" className="worksImg" />
+          <h1 className="containerImgText">PINGAPPLY</h1>
+          <p>Chrome extension</p>
+        </div>
         <div
           onClick={() =>
             window.open(
@@ -61,16 +81,6 @@ const Works = () => {
           <img src={portfolio3} alt="" className="worksImg" />
           <h1 className="containerImgText">Car Theft Detection</h1>
           <p>python</p>
-        </div>
-        <div
-          className="containerImg"
-          onClick={() =>
-            window.open("https://github.com/heisenlord/PingApply", "_blank")
-          }
-        >
-          <img src={portfolio7} alt="" className="worksImg" />
-          <h1 className="containerImgText">PINGAPPLY</h1>
-          <p>Chrome extension</p>
         </div>
         <div className="containerImg">
           <img src={portfolio5} alt="" className="worksImg" />
