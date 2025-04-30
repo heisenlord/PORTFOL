@@ -550,16 +550,9 @@
 }
 
 @media screen and (max-width: 576px) {
-  .navbar {
-    width: 100%;
-    border-radius: 0;
-    top: 0;
-    padding: 0 1rem;
-  }
 
-  .navbar-scrolled {
-    top: 0;
-  }
+
+
 
   .logo-text {
     /* display: none; */
