@@ -131,9 +131,9 @@ function Navbar() {
             </Link>
           ))}
         </div>
+          <Holder />
 
         <div className="button-container">
-          <Holder />
           <button
             onClick={onCVButtonClick}
             className={`navcontact ${animated ? "wobble" : ""}`}
