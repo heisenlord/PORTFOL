@@ -40,11 +40,11 @@ function Navbar() {
   // Handle scroll effect for navbar
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      // if (window.scrollY > 50) {
+      //   setScrolled(true);
+      // } else {
+      //   setScrolled(false);
+      // }
     };
 
     window.addEventListener("scroll", handleScroll);
