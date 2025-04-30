@@ -27,7 +27,7 @@ const Works = () => {
         >
           <img src={notatwitter} alt="" className="worksImg" />
           <h1 className="containerImgText">NotATwitter</h1>
-          <p>A Socail networking website where virtual persona's of humans will be there</p>
+          <p>A Socail networking website where virtual persona's of humans will be react and reply to your NotATweet</p>
         </div>
         <div
           className="containerImg"
