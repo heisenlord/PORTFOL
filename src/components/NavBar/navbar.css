@@ -12,23 +12,64 @@
   z-index: 3;
   background-color: rgba(29, 28, 28, 0.4);
   border-radius: 3rem;
-  margin: 0px auto;
   opacity: 0.99;
   backdrop-filter: blur(50px);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+.menu-icon {
+  object-fit: cover; /* options: cover, contain, fill, none, scale-down */
+
+  overflow: scroll;
+  width: 5rem;
+  height: 1.4rem;
+}
+
+.navbar-scrolled {
+  top: 0;
+  border-radius: 0;
+  width: 100%;
+}
+
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .logo {
   object-fit: cover;
+  height: 2.5rem;
 }
+
+.logo-text {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.navcenter {
+  display: flex;
+  align-items: center;
+}
+
 .navitems {
   margin: 1rem;
   cursor: pointer;
-  transition: 0.25s;
-  padding-bottom: 1rem;
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding-bottom: 0.5rem;
+  color: white;
+  position: relative;
 }
 
 .navitems:hover {
-  color: rgba(246, 153, 54, 0.506);
-  border-bottom: 5px solid rgba(218, 118, 51, 0.506);
+  color: rgba(246, 153, 54, 0.9);
+  border-bottom: 5px solid rgba(218, 118, 51, 0.9);
+  transform: translateY(-2px);
+}
+
+.nav-clicked {
+  transform: scale(0.9);
+  opacity: 0.8;
 }
 
 .navbarcontactimg {
@@ -36,6 +77,12 @@
   height: 2em;
   margin: 0.75rem;
 }
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
 .navcontact {
   background-color: white;
   border: none;
@@ -47,12 +94,19 @@
   box-shadow: 0.25rem 0.25rem 0.5rem pink;
   width: 5rem;
   height: 3rem;
-  transition: 1s;
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
 }
+
 .navcontact:hover {
   height: 4rem;
   animation: none;
 }
+
+.navcontact:active {
+  transform: scale(0.95);
+}
+
 .workBtnText {
   color: white;
   font-size: larger;
@@ -63,17 +117,71 @@
   color: antiquewhite;
   padding-bottom: 3px;
   border-top: 6px solid rgba(164, 27, 255, 0.506);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
 .active.navitems:hover {
   color: rgb(56, 54, 51);
   border-bottom: none;
 }
 
+/* Mobile Menu Toggle Button */
+.mobMenu-toggle {
+  display: none;
+  width: 5rem;
+  height: 24px;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.mobMenu-toggle span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mobMenu-toggle span:nth-child(1) {
+  top: 0px;
+}
+
+.mobMenu-toggle span:nth-child(2) {
+  top: 10px;
+}
+
+.mobMenu-toggle span:nth-child(3) {
+  top: 20px;
+}
+
+.mobMenu-toggle.active span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+.mobMenu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.mobMenu-toggle.active span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
 .navMenu {
   position: absolute;
-  top: 4rem;
-  right: 1.5rem;
-
+  top: 6rem;
+  right: 10%;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -82,39 +190,67 @@
   min-width: 15rem;
   background-color: rgb(40, 40, 40);
   border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: top center;
+  animation: menuAppear 0.3s forwards;
 }
-.mobMenu {
-  display: none;
-  object-fit: cover;
 
-  height: 1.8rem;
-  overflow: hidden;
+@keyframes menuAppear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .listItem {
   color: whitesmoke;
   padding: 0.5rem 3rem;
   margin: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 0px solid transparent;
+  padding-left: 3rem;
 }
+
+.listItem:hover {
+  /* border-left: 4px solid rgba(246, 153, 54, 0.8); */
+}
+
 .listItem.active {
   border-top: none;
   color: rgba(209, 203, 216, 0.506);
-
   border-right: 6px solid rgba(164, 27, 255, 0.506);
 }
 
-@media screen and (max-width: 720px) {
-  .mobMenu {
-    display: flex;
-    position: absolute;
-    right: 2rem;
-  }
-  .navcenter {
-    display: none;
-  }
-  .navcontact {
-   display:none;
-  }
+.mobile-download {
+  margin: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+}
+
+.mobile-download:active {
+  transform: scale(0.95);
+}
+
+/* Animations */
+.wobble {
+  animation: wobble 1s ease;
 }
 
 @keyframes wobble {
@@ -140,19 +276,313 @@
     transform: rotate(0deg);
   }
 }
-.mobile-download {
-  margin: 1rem 2rem;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  color: white;
+
+/* Confetti animation */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  top: -10px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* Resume Modal Styles - Updated for Image Preview */
+.resume-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease;
+  transition: opacity 0.4s ease;
+}
+
+.resume-modal-content {
+  width: 90%;
+  max-width: 850px;
+  height: 85vh;
+  background-color: rgb(40, 40, 40);
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  animation: scaleIn 0.3s ease;
+  /* border: 1px solid rgba(246, 153, 54, 0.3); */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.resume-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.2);
   border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.resume-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(90deg);
+}
+
+.resume-modal-content h2 {
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin: 0;
+  font-size: 1.5rem;
+  /* border-bottom: 1px solid rgba(246, 153, 54, 0.3); */
+}
+
+.resume-container {
+  flex: 1;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+/* Loading indicator */
+.resume-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-loading:after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: rgba(246, 153, 54, 0.8);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Image container styles */
+.resume-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.resume-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+}
+
+/* Add zoom effect on hover */
+.resume-image:hover {
+  transform: scale(1);
+}
+
+.resume-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  /* border-top: 1px solid rgba(246, 153, 54, 0.3); */
+}
+
+.resume-modal-actions button {
+  padding: 0.75rem 2rem;
   border-radius: 2rem;
+  border: none;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.mobile-download:hover {
+.download-button {
+  background: linear-gradient(
+    135deg,
+    rgba(246, 153, 54, 0.8),
+    rgba(164, 27, 255, 0.8)
+  );
+  color: white;
+}
+
+.download-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+  box-shadow: 0 8px 20px rgba(246, 153, 54, 0.4);
+}
+
+.download-button:active,
+.cancel-button:active {
+  transform: scale(0.95);
+}
+
+.cancel-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.cancel-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Resume iframe - keep for compatibility if you want to switch back */
+.resume-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+  .navbar {
+    width: 95%;
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navcenter {
+    display: none;
+  }
+
+  .button-container {
+    display: none;
+  }
+
+  .mobMenu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    height: 4.5rem;
+  }
+
+  .navMenu {
+    width: 80%;
+    right: 10%;
+    top: 5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar {
+    width: 100%;
+    border-radius: 0;
+    top: 0;
+    padding: 0 1rem;
+  }
+
+  .navbar-scrolled {
+    top: 0;
+  }
+
+  .logo-text {
+    /* display: none; */
+  }
+
+  .navMenu {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 4.5rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .resume-modal-content {
+    width: 95%;
+    height: 90vh;
+  }
+
+  .resume-modal-actions button {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .resume-image-container {
+    padding: 0.5rem;
+  }
 }
